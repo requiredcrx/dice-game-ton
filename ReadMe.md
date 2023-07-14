@@ -75,8 +75,6 @@ const handleRoll = () => {
 
 ### Leaderboard (Leaderboard.js)
 This displays a table of the top ranked players by name, rank and total rolls. The data is passed in as a prop from the parent.
-
-Let me know if you would like me to explain any other part of the code or project! I aimed to highlight some of the core logic in BetRoll, Wallet and Leaderboard components.
 ```jsx
 <Table>
   <thead>
