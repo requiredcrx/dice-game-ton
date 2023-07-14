@@ -47,6 +47,57 @@ useEffect(() => {
 }, []);
 ```
 
+### Place bet (BetRoll.js)
+This saves the bet amount input by the user to state, updating it on change.
+```jsx
+const handleRoll = () => {
+  const roll = Math.floor(Math.random() * 6) + 1;
+  if (roll === 6) {
+    // Win 3x bet amount
+  }  
+}
+
+<button onClick={handleRoll}>Roll</button>
+```
+
+### Roll dice (BetRoll.js)
+The handleRoll method is triggered when the user clicks "Roll". A random number between 1 and 6 is generated to simulate the dice roll. If a 6 is rolled, the user wins 3x their bet.
+```jsx
+const handleRoll = () => {
+  const roll = Math.floor(Math.random() * 6) + 1;
+  if (roll === 6) {
+    // Win 3x bet amount
+  }  
+}
+
+<button onClick={handleRoll}>Roll</button>
+```
+
+### Leaderboard (Leaderboard.js)
+This displays a table of the top ranked players by name, rank and total rolls. The data is passed in as a prop from the parent.
+
+Let me know if you would like me to explain any other part of the code or project! I aimed to highlight some of the core logic in BetRoll, Wallet and Leaderboard components.
+```jsx
+<Table>
+  <thead>
+    <tr>
+      <th>Rank</th>  
+      <th>Name</th>
+      <th>Rolls</th>
+    </tr>  
+  </thead>
+  <tbody>
+    {data.map(item => (
+      <tr key={item.name}>
+        <td>{item.rank}</td>
+        <td>{item.name}</td> 
+        <td>{item.rolls}</td>
+      </tr>
+    ))}
+  </tbody>
+</Table>
+```
+
 ## Betting Screen
 User enters bet amount
 - Click "Roll Dice" to roll
